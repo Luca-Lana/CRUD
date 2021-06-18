@@ -13,7 +13,7 @@ public class Application {
 
         DespesaDAO dao = new DespesaDAO();
 
-        Despesa despesa = new Despesa("Pagamento do Plano de Saude", Categoria.SAUDE, 1000.00, LocalDate.of(2021,7, 10));
+        Despesa despesa = new Despesa("Pagamento do Uber", Categoria.TRANSPORTE, 300.00, LocalDate.of(2021,5, 10));
 
         dao.insert(despesa);
     }

@@ -4,9 +4,7 @@ import luca.infra.ConnectionFactory;
 import luca.model.Categoria;
 import luca.model.Despesa;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -19,13 +17,19 @@ public class DespesaDAO implements IDespesaDAO{
 
            String sql = "INSERT INTO despesas(descricao, valor, data, categoria) VALUES(?, ?, ?, ?)";
 
-           PreparedStatement stmt = conexao.prepareStatement(sql);
+           PreparedStatement stmt = conexao.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1,despesa.getDescricao());
             stmt.setDouble(2,despesa.getValor());
             stmt.setDate(3, java.sql.Date.valueOf(despesa.getData()));
             stmt.setString(4, despesa.getCategoria().toString());
 
             stmt.executeUpdate();
+
+            ResultSet resulSet = stmt.getGeneratedKeys();
+            resulSet.next();
+
+            Long generateId = resulSet.getLong(1);
+            despesa.setId(generateId);
 
        }catch (SQLException e){
            throw new RuntimeException(e);
