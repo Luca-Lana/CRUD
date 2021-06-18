@@ -1,7 +1,7 @@
 <h1>CRUD</h1> 
 
 
-> Status do Projeto: :warning: Em Desenvolvimento
+> Status do Projeto: :heavy_check_mark: Concluido
 
 ## Descrição do projeto 
 

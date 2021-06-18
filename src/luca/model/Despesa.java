@@ -6,14 +6,23 @@ public class Despesa {
 
     private Long id;
     private String descricao;
-    private LocalDate data;
     private double valor;
+    private LocalDate data;
     private Categoria categoria;
 
-    public Despesa(String descricao, Categoria categoria , double valor, LocalDate data) {
+
+    public Despesa(String descricao, double valor, LocalDate data, Categoria categoria) {
         this.descricao = descricao;
-        this.data = data;
         this.valor = valor;
+        this.data = data;
+        this.categoria = categoria;
+    }
+
+    public Despesa(Long id, String descricao, double valor, LocalDate data, Categoria categoria) {
+        this.id = id;
+        this.descricao = descricao;
+        this.valor = valor;
+        this.data = data;
         this.categoria = categoria;
     }
 
