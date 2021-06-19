@@ -1,4 +1,4 @@
-package luca;
+package main;
 
 public class Application {
 

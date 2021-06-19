@@ -1,7 +1,7 @@
-package luca.dao;
+package main.dao;
 
-import luca.model.Categoria;
-import luca.model.Despesa;
+import main.model.Categoria;
+import main.model.Despesa;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package luca.infra;
+package main.infra;
 
 import java.io.IOException;
 import java.sql.Connection;

@@ -1,8 +1,8 @@
-package luca.dao;
+package main.dao;
 
-import luca.infra.ConnectionFactory;
-import luca.model.Categoria;
-import luca.model.Despesa;
+import main.infra.ConnectionFactory;
+import main.model.Categoria;
+import main.model.Despesa;
 
 import java.sql.*;
 import java.time.LocalDate;

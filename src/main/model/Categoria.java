@@ -1,4 +1,4 @@
-package luca.model;
+package main.model;
 
 public enum Categoria {
 
